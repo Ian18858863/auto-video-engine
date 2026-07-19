@@ -1,0 +1,1 @@
+"""Global account style library."""

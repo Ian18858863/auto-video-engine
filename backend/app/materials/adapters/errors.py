@@ -1,0 +1,2 @@
+class DesktopAutomationError(RuntimeError):
+    pass

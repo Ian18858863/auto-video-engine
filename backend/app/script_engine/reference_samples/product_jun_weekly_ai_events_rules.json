@@ -1,0 +1,76 @@
+{
+  "name": "product_jun_weekly_ai_events_reference",
+  "role": "script_engine_reference_sample",
+  "priority_note": "账号风格库优先；本样本只参考结构、节奏、转译方式和素材组织。",
+  "do_not_copy": [
+    "原文文案",
+    "封面视觉",
+    "人物素材",
+    "具体品牌包装"
+  ],
+  "core_formula": "技术事件 -> 普通人处境 -> 强场景钩子 -> 证据画面快剪 -> 一句判断字幕",
+  "lead_event_scoring": [
+    {"dimension": "普通人处境感", "weight": 25},
+    {"dimension": "具体动作感", "weight": 20},
+    {"dimension": "反常识/离谱感", "weight": 15},
+    {"dimension": "大公司/名人背书", "weight": 15},
+    {"dimension": "画面证据可得性", "weight": 15},
+    {"dimension": "与账号方向匹配", "weight": 10}
+  ],
+  "preferred_hooks": [
+    "钱/工作冲击",
+    "关系/人格化",
+    "荒诞但具体的故事",
+    "大公司动作被翻译成普通人场景"
+  ],
+  "weak_hooks": [
+    "只说模型名",
+    "只说最强/王炸/史诗",
+    "只说功能上线",
+    "没有普通人损益"
+  ],
+  "structure": {
+    "multi_topic": [
+      "0-3s 强钩子",
+      "3-12s 本期总判断",
+      "12-45s 最抓人的第 1 条",
+      "45-165s 其余信息点快节奏推进",
+      "165-180s 总结 + 轻 CTA"
+    ],
+    "item_unit": [
+      "谁发布/开源/上线了什么",
+      "一句人话翻译",
+      "一句影响判断",
+      "一个证据画面需求"
+    ]
+  },
+  "visual_source_priority": [
+    "官方页面录屏",
+    "产品演示/发布会画面",
+    "论文截图/榜单/数据图",
+    "模型效果图/生成视频片段",
+    "信息动效",
+    "Pexels 泛素材"
+  ],
+  "subtitle_rule": "底部一行理解提示，不是逐字稿；每屏只讲一个判断。",
+  "audio_rule": "连续信息流；13 条样本语音密度约 0.992-1.0，AI 配音可略快但必须清楚。",
+  "cover_rule": {
+    "title_and_cover_can_differ": true,
+    "cover_pattern": "固定系列标签 + 6-10 字强场景钩子",
+    "examples_to_learn_from": [
+      "AI替你相亲",
+      "龙虾跑滴滴",
+      "人类跟AI结婚",
+      "龙虾赚钱养家",
+      "AI开年王炸"
+    ]
+  },
+  "quality_check": [
+    "开头是否是普通人场景，而不是模型名？",
+    "第一条是否最抓人？",
+    "每条是否都有一句人话判断？",
+    "每条是否都有素材建议？",
+    "封面文案是否比标题更短更狠？",
+    "是否避免纯营销号焦虑？"
+  ]
+}

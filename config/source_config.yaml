@@ -1,0 +1,193 @@
+# V1 稳定优先：能抓才开启，不稳定来源先保留配置入口。
+rss_sources:
+  - name: 36氪
+    url: https://36kr.com/feed
+    enabled: true
+    category: 商业
+    tags: [国内, 商业, 科技, 创业]
+  - name: IT之家
+    url: https://www.ithome.com/rss/
+    enabled: true
+    category: 科技
+    tags: [国内, 科技, 消费电子, AI]
+  - name: 量子位
+    url: https://www.qbitai.com/feed
+    enabled: true
+    category: AI
+    tags: [国内, AI, 科技]
+  - name: TechCrunch
+    url: https://techcrunch.com/feed/
+    enabled: true
+    category: 科技
+    tags: [科技, 创业, AI]
+  - name: The Verge
+    url: https://www.theverge.com/rss/index.xml
+    enabled: true
+    category: 科技
+    tags: [科技, 消费电子, 平台]
+  - name: MIT Technology Review
+    url: https://www.technologyreview.com/feed/
+    enabled: true
+    category: 科技
+    tags: [科技, AI, 趋势]
+  - name: Ars Technica
+    url: https://feeds.arstechnica.com/arstechnica/index
+    enabled: true
+    category: 科技
+    tags: [科技, 商业, 硬件, 平台]
+  - name: WIRED
+    url: https://www.wired.com/feed/rss
+    enabled: true
+    category: 科技
+    tags: [科技, AI, 消费, 国际]
+  - name: Engadget
+    url: https://www.engadget.com/rss.xml
+    enabled: true
+    category: 科技
+    tags: [科技, 消费电子, AI]
+  - name: VentureBeat AI
+    url: https://venturebeat.com/category/ai/feed/
+    enabled: true
+    category: AI
+    tags: [AI, 创业, 企业服务]
+  - name: 虎嗅
+    url: https://www.huxiu.com/rss/0.xml
+    enabled: true
+    category: 商业
+    tags: [国内, 商业, 消费, 科技]
+  - name: 爱范儿
+    url: https://www.ifanr.com/feed
+    enabled: true
+    category: 消费
+    tags: [国内, 消费电子, 科技, AI]
+  - name: 少数派
+    url: https://sspai.com/feed
+    enabled: true
+    category: 生活
+    tags: [效率工具, 消费科技, 生活方式]
+  - name: Reuters
+    url: ""
+    enabled: false
+    category: 财经
+    tags: [财经, 商业]
+  - name: 国家统计局
+    url: ""
+    enabled: false
+    category: 财经
+    tags: [经济, 消费, 就业]
+  - name: 中国人民银行
+    url: ""
+    enabled: false
+    category: 财经
+    tags: [金融, 经济]
+
+china_public_sources:
+  - provider: baidu_hot
+    name: 百度热搜
+    enabled: true
+    limit: 30
+  - provider: toutiao_hot
+    name: 今日头条热榜
+    enabled: true
+    limit: 30
+  - provider: bilibili_ranking
+    name: B站全站排行
+    enabled: false
+    rid: 0
+    limit: 30
+  - provider: bilibili_ranking
+    name: B站科技区排行
+    enabled: false
+    rid: 188
+    limit: 20
+
+# B站优先使用下面 browser_hotspot_sources 的浏览器登录态采集。
+# 旧排行榜公开接口当前容易返回风控或失败，默认关闭，避免设置页误报“B站科技区排行失败”。
+# 不登录、不绕验证码、不破解签名；后续可用稳定公开接口或自建 RSSHub 后再启用。
+
+browser_hotspot_sources:
+  - provider: bilibili_popular_web
+    name: B站热门网页版
+    url: https://www.bilibili.com/v/popular/all
+    enabled: true
+    category: 互联网趋势
+    tags: [B站, 视频热点, 公开热点]
+    limit: 10
+  - provider: bilibili_tech_rank_web
+    name: B站科技区排行网页版
+    url: https://www.bilibili.com/v/popular/rank/tech
+    enabled: true
+    category: 科技
+    tags: [B站, 科技, 视频热点]
+    limit: 10
+  - provider: baidu_web
+    name: 百度热搜网页版
+    url: https://top.baidu.com/board?tab=realtime
+    enabled: true
+    category: 社会
+    tags: [百度, 热搜, 公开热点]
+    limit: 12
+  - provider: weibo_web
+    name: 微博热搜网页版
+    url: https://s.weibo.com/top/summary
+    enabled: true
+    category: 社会
+    tags: [微博, 热搜, 公开热点]
+    limit: 12
+  - provider: douyin_web
+    name: 抖音热点网页版
+    url: https://www.douyin.com/hot
+    enabled: true
+    category: 生活
+    tags: [抖音, 视频热点, 公开热点]
+    limit: 10
+  - provider: xiaohongshu_web
+    name: 小红书公开发现页
+    url: https://www.xiaohongshu.com/explore
+    enabled: true
+    category: 生活
+    tags: [小红书, 消费趋势, 公开热点]
+    limit: 10
+  - provider: cailianpress_web
+    name: 财联社电报网页版
+    url: https://www.cls.cn/telegraph
+    enabled: true
+    category: 财经
+    tags: [财联社, 财经, 商业]
+    limit: 10
+
+google_news_keywords:
+  - AI
+  - 人工智能
+  - 科技
+  - 商业
+  - 消费趋势
+  - 财经
+  - 平台经济
+  - 新能源汽车
+  - 芯片
+  - Robotaxi
+  - 互联网大厂
+  - AI工具
+
+hacker_news:
+  enabled: true
+  limit: 30
+
+reddit:
+  enabled: true
+  limit: 20
+
+reddit_subreddits:
+  - technology
+  - artificialintelligence
+  - singularity
+  - MachineLearning
+  - OpenAI
+  - Futurology
+  - Entrepreneur
+  - SaaS
+  - Productivity
+  - ChatGPT
+  - SideProject
+  - startups

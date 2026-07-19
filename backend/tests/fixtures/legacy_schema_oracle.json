@@ -1,0 +1,7 @@
+{
+  "archive_sha256": "a349dd2ebd58fc5f65eea97e38aafa05c26f209b86a8cf64ee98db624de0bef1",
+  "format": "sqlite-rich-schema-v1",
+  "head_schema_sha256": "89e59b0705e43eaea57f4ca123c5ffc15e7049d67f3d488752984e717355f6e9",
+  "schema_sha256": "fe47a0731bc2071ff7baec570f75e8272d40603088bd94a04191f50063a1bfcc",
+  "table_count": 12
+}

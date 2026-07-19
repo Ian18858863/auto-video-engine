@@ -1,0 +1,36 @@
+{
+  "name": "auto-video-engine-remotion-hyperframes",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts --host 127.0.0.1",
+    "render:test": "remotion render src/index.ts InfoMotion \"D:/素材/自动生成/信息动效/本地信息动效测试.mp4\" --codec=h264 --pixel-format=yuv420p --crf=18 --browser-executable=\"C:/Program Files/Google/Chrome/Application/chrome.exe\"",
+    "render": "remotion render src/index.ts InfoMotion --browser-executable=\"C:/Program Files/Google/Chrome/Application/chrome.exe\""
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.3.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "@remotion/cli": "4.0.399",
+    "@remotion/media-utils": "4.0.399",
+    "@remotion/motion-blur": "4.0.399",
+    "@remotion/noise": "4.0.399",
+    "@remotion/paths": "4.0.399",
+    "@remotion/player": "4.0.399",
+    "@remotion/renderer": "4.0.399",
+    "@remotion/shapes": "4.0.399",
+    "@remotion/transitions": "4.0.399",
+    "maath": "^0.10.8",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remotion": "4.0.399",
+    "three": "^0.178.0",
+    "vite-plugin-glsl": "^1.5.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "typescript": "~5.9.3"
+  }
+}
